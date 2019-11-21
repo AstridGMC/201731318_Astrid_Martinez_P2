@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Subir mi Archivo</title>
+</head>
+
+<body style="background-color: #030F1B">
+    <% include bloque/header.html %>
+    <div>
+
+        <h1 style="font-size:90px; padding-top: 30px;">Insertar Archivo </h1>
+
+        <input id="formularioArchivos" type="file" name="file" accept=".txt" required>
+        <input type="text" value=lineas style="display: none">
+        <button id="enviando" class="enviar" onclick="javascript: ocultar();">Eniviar</button>
+        <button style="display: none;" class="enviar" id="analizador">Analizar</button>
+
+        <div id="textos" style="padding-top: 50px;">
+            <div id="textoPorLeer">
+                <h4>Contenido del archivo:</h3>
+                    <textarea id="contenido-archivo"></textarea>
+            </div>
+            <div id="textoLeido" style="font-size: 30px;">
+                <h4>textoLeido</h4>
+                </br>
+                </br>
+                <div>
+                    <h5 scope="col">identificador</h5>
+                    <ul id='identificador'>
+                    </ul>
+                </div>
+                <div>
+                    <h5>palabrasReservadas</h5>
+                    <ul id="palabrasReservadas">
+                    </ul>
+                </div>
+                <div>
+                    <h5 scope="col">boolean</h5>
+                    <ul id='boolean'>
+                    </ul>
+                </div>
+                <div>
+                    <h5 scope="col">agrupacion </h5>
+                    <ul id='agrupacion'>
+                    </ul>
+                </div>
+                <div>
+                    <h5 scope="col">signo</h5>
+                    <ul id='signo'>
+                    </ul>
+                </div>
+                <div>
+                    <h5 scope="col">numeroEntero</h5>
+
+                    <ul id='numeroEntero'>
+
+                    </ul>
+                </div>
+                <div>
+                    <h5 scope="col">numeroFlotante</h5>
+                    <ul id='numeroFlotante'>
+                    </ul>
+                </div>
+                <div>
+                    <h5 scope="col">errores</h5>
+                    <ul id='error'>
+                    </ul>
+                </div>
+                <div>
+                    <h5 scope="col">operador</h5>
+                    <ul id='operador'>
+                    </ul>
+                </div>
+            </div>
+            <br />
+            <br />
+
+        </div>
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+        <script src="../script/scriptInsertarArchivo.js"> </script>
+
+</body>
+
+</html>
